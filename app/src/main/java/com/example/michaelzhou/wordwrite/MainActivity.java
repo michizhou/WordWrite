@@ -1,4 +1,4 @@
-package com.example.michaelzhou.speechmaster;
+package com.example.michaelzhou.wordwrite;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import java.io.IOException;
+
 import pl.bclogic.pulsator4droid.library.PulsatorLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,21 +26,21 @@ public class MainActivity extends AppCompatActivity {
     private static String mFileName = null;
 
     private MediaRecorder mRecorder = null;
-    private MediaPlayer   mPlayer = null;
+    private MediaPlayer mPlayer = null;
 
     // Requesting permission to RECORD_AUDIO
     private boolean permissionToRecordAccepted = false;
-    private String [] permissions = {Manifest.permission.RECORD_AUDIO};
+    private String[] permissions = {Manifest.permission.RECORD_AUDIO};
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode){
+        switch (requestCode) {
             case REQUEST_RECORD_AUDIO_PERMISSION:
-                permissionToRecordAccepted  = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                permissionToRecordAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 break;
         }
-        if (!permissionToRecordAccepted ) finish();
+        if (!permissionToRecordAccepted) finish();
 
     }
 
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Record to the external cache directory for visibility
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             boolean mStartRecording = true;
 
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 onRecord(mStartRecording);
                 if (mStartRecording) {
-                    PulsatorLayout pulsatorLayout = (PulsatorLayout)findViewById(R.id.pulsator);
+                    PulsatorLayout pulsatorLayout = findViewById(R.id.pulsator);
                     pulsatorLayout.start();
                 }
                 mStartRecording = !mStartRecording;

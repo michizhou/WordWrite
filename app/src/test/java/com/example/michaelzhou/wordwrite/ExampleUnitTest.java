@@ -1,4 +1,4 @@
-package com.example.michaelzhou.speechmaster;
+package com.example.michaelzhou.wordwrite;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.michaelzhou.speechmaster;
+package com.example.michaelzhou.wordwrite;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
