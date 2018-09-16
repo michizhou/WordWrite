@@ -21,14 +21,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Listener function
-        final AIConfiguration config = new AIConfiguration("YOUR_ACCESS_TOKEN",
-                AIConfiguration.SupportedLanguages.English,
-                AIConfiguration.RecognitionEngine.System);
+        final AIConfiguration config = new AIConfiguration(
+                "14bbcece37504c4aaa16763eee07dc41",
+                AIConfiguration.SupportedLanguages.English);
 
         aiButton = (AIButton) findViewById(R.id.micButton);
 
         aiButton.initialize(config);
         aiButton.setResultsListener(new AIButton.AIButtonListener() {
+
             @Override
             public void onResult(final AIResponse result) {
                 runOnUiThread(new Runnable() {
