@@ -23,6 +23,7 @@
         android:scaleType="center"
         android:tint="@android:color/white"
         android:visibility="visible"
+        android:onClick="start"
         app:backgroundTint="@android:color/holo_orange_dark"
         app:elevation="@android:dimen/app_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
