@@ -64,6 +64,62 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(i);
 //            }
 //        });
+        FloatingActionButton firstNButton = (FloatingActionButton)findViewById(R.id.firstNextButton);
+        firstNButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton secondNButton = (FloatingActionButton)findViewById(R.id.secondNextButton);
+        secondNButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton thirdNButton = (FloatingActionButton)findViewById(R.id.thirdNextButton);
+        thirdNButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton fourthNButton = (FloatingActionButton)findViewById(R.id.fourthNextButton);
+        fourthNButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton secondPButton = (FloatingActionButton)findViewById(R.id.secondPrevButton);
+        secondPButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton thirdPButton = (FloatingActionButton)findViewById(R.id.thirdPrevButton);
+        thirdPButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton fourthPButton = (FloatingActionButton)findViewById(R.id.fourthPrevButton);
+        fourthPButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
+        FloatingActionButton fifthPButton = (FloatingActionButton)findViewById(R.id.fifthPrevButton);
+        fifthPButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent i = new Intent(MainActivity.this, CorrectionActivity.class);
+                startActivity(i);
+            }
+        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
